@@ -5,7 +5,7 @@ import { subTotal, quantity, totalCost } from "../partials/Mixins";
 
 import { cartListProduct } from "../partials/FetchApi";
 import { getBrainTreeToken, getPaymentProcess } from "./FetchApi";
-import { fetchData, fetchbrainTree, pay } from "./Action";
+import { fetchData, fetchbrainTree, pay, pay2 } from "./Action";
 
 import DropIn from "braintree-web-drop-in-react";
 
@@ -113,23 +113,14 @@ export const CheckoutComponent = (props) => {
                       placeholder="+880"
                     />
                   </div>
-                  <DropIn
-                    options={{
-                      authorization: state.clientToken,
-                      paypal: {
-                        flow: "vault",
-                      },
-                    }}
-                    onInstance={(instance) => (state.instance = instance)}
-                  />
+                  
                   <div
                     onClick={(e) =>
-                      pay(
+                      pay2(
                         data,
                         dispatch,
                         state,
                         setState,
-                        getPaymentProcess,
                         totalCost,
                         history
                       )

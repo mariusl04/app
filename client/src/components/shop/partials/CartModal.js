@@ -175,7 +175,7 @@ const CartModal = () => {
                       cartModalOpen();
                     }}
                   >
-                    Total ${data.cartTotalCost}.00
+                    Realizar pedido ${data.cartTotalCost}.00
                   </div>
                 ) : (
                   <div

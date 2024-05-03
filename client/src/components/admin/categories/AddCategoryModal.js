@@ -102,7 +102,7 @@ const AddCategoryModal = (props) => {
         <div className="relative bg-white w-12/12 md:w-3/6 shadow-lg flex flex-col items-center space-y-4  overflow-y-auto px-4 py-4 md:px-8">
           <div className="flex items-center justify-between w-full pt-4">
             <span className="text-left font-semibold text-2xl tracking-wider">
-              Add Category
+              Anadir Categoría
             </span>
             {/* Close Modal */}
             <span
@@ -132,7 +132,7 @@ const AddCategoryModal = (props) => {
           {fData.success ? alert(fData.success, "green") : ""}
           <form className="w-full" onSubmit={(e) => submitForm(e)}>
             <div className="flex flex-col space-y-1 w-full py-4">
-              <label htmlFor="name">Category Name</label>
+              <label htmlFor="name">Nombre</label>
               <input
                 onChange={(e) =>
                   setFdata({
@@ -148,7 +148,7 @@ const AddCategoryModal = (props) => {
               />
             </div>
             <div className="flex flex-col space-y-1 w-full">
-              <label htmlFor="description">Category Description</label>
+              <label htmlFor="description">Descripción</label>
               <textarea
                 onChange={(e) =>
                   setFdata({
@@ -168,7 +168,7 @@ const AddCategoryModal = (props) => {
             </div>
             {/* Image Field & function */}
             <div className="flex flex-col space-y-1 w-full">
-              <label htmlFor="name">Category Image</label>
+              <label htmlFor="name">Imagen</label>
               <input
                 accept=".jpg, .jpeg, .png"
                 onChange={(e) => {
@@ -184,7 +184,7 @@ const AddCategoryModal = (props) => {
               />
             </div>
             <div className="flex flex-col space-y-1 w-full">
-              <label htmlFor="status">Category Status</label>
+              <label htmlFor="status">Estado</label>
               <select
                 name="status"
                 onChange={(e) =>
@@ -199,10 +199,10 @@ const AddCategoryModal = (props) => {
                 id="status"
               >
                 <option name="status" value="Active">
-                  Active
+                  Activo
                 </option>
                 <option name="status" value="Disabled">
-                  Disabled
+                  Inactivo
                 </option>
               </select>
             </div>

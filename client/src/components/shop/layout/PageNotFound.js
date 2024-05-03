@@ -22,6 +22,7 @@ const PageNotFoundComponent = (props) => {
       </span>
       <span className="text-center text-gray-700 text-4xl font-bold tracking-widest">
         404 not found
+        revisa la URL
       </span>
     </div>
   );

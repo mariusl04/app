@@ -51,7 +51,7 @@ const CategoryList = () => {
             );
           })
         ) : (
-          <div className="text-xl text-center my-4">No Category</div>
+          <div className="text-xl text-center my-4">Sin categorías</div>
         )}
       </div>
     </div>
@@ -104,11 +104,11 @@ const FilterList = () => {
     <div className={`${data.filterListDropdown ? "" : "hidden"} my-4`}>
       <hr />
       <div className="w-full flex flex-col">
-        <div className="font-medium py-2">Filter by price</div>
+        <div className="font-medium py-2">Filtrar por precio</div>
         <div className="flex justify-between items-center">
           <div className="flex flex-col space-y-2  w-2/3 lg:w-2/4">
             <label htmlFor="points" className="text-sm">
-              Price (between 0 and 10$):{" "}
+              Precio (entre 0 y 10$):{" "}
               <span className="font-semibold text-yellow-700">{range}.00$</span>{" "}
             </label>
             <input

@@ -17,7 +17,7 @@ const Submenu = ({ category }) => {
               className="hover:text-yellow-700 cursor-pointer"
               onClick={(e) => history.push("/")}
             >
-              Shop
+              Tienda
             </span>
             <span className="text-yellow-700 cursor-default">{category}</span>
           </div>
@@ -112,7 +112,7 @@ const AllProduct = ({ products }) => {
           })
         ) : (
           <div className="col-span-2 md:col-span-3 lg:col-span-4 flex items-center justify-center py-24 text-2xl">
-            No product found
+            No se han encontrado pedidos
           </div>
         )}
       </section>

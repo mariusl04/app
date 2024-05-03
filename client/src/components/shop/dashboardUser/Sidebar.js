@@ -31,7 +31,7 @@ const Sidebar = (props) => {
             />
           </svg>
           <div className="flex flex-col w-full">
-            <span className="text-sm">Hello,</span>
+            <span className="text-sm">Hola,</span>
             <span className="text-lg">
               {data.userDetails ? data.userDetails.name : ""}
             </span>
@@ -46,7 +46,7 @@ const Sidebar = (props) => {
                 : ""
             }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >
-            My Orders
+            Mis pedidos
           </div>
           <hr />
           <div
@@ -57,14 +57,14 @@ const Sidebar = (props) => {
                 : ""
             }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >
-            My Accounts
+            Mi cuenta
           </div>
           <hr />
           <div
             onClick={(e) => history.push("/wish-list")}
             className={` px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >
-            My Wishlist
+            Mi lista de deseos
           </div>
           <hr />
           <div
@@ -75,7 +75,7 @@ const Sidebar = (props) => {
                 : ""
             }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >
-            Setting
+            Ajustes
           </div>
           <hr />
           <div
@@ -86,7 +86,7 @@ const Sidebar = (props) => {
                 : ""
             }  px-4 py-4 hover:bg-gray-200 cursor-pointer`}
           >
-            Logout
+            Cerrar sesión
           </div>
         </div>
       </div>

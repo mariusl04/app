@@ -77,13 +77,13 @@ const AllCategory = (props) => {
         <table className="table-auto border w-full my-2">
           <thead>
             <tr>
-              <th className="px-4 py-2 border">Category</th>
-              <th className="px-4 py-2 border">Description</th>
+              <th className="px-4 py-2 border">Categoría</th>
+              <th className="px-4 py-2 border">Descripción</th>
               <th className="px-4 py-2 border">Image</th>
-              <th className="px-4 py-2 border">Status</th>
-              <th className="px-4 py-2 border">Created at</th>
-              <th className="px-4 py-2 border">Updated at</th>
-              <th className="px-4 py-2 border">Actions</th>
+              <th className="px-4 py-2 border">Estado</th>
+              <th className="px-4 py-2 border">Creado</th>
+              <th className="px-4 py-2 border">Actualizado</th>
+              <th className="px-4 py-2 border">Acciones</th>
             </tr>
           </thead>
           <tbody>
@@ -106,14 +106,14 @@ const AllCategory = (props) => {
                   colSpan="7"
                   className="text-xl text-center font-semibold py-8"
                 >
-                  No category found
+                  No hay categorías
                 </td>
               </tr>
             )}
           </tbody>
         </table>
         <div className="text-sm text-gray-600 mt-2">
-          Total {categories && categories.length} category found
+          Total {categories && categories.length} categoría/s
         </div>
       </div>
     </Fragment>

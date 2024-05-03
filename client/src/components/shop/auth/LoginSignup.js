@@ -7,7 +7,7 @@ const LoginSignup = (props) => {
   const { data, dispatch } = useContext(LayoutContext);
 
   const [login, setLogin] = useState(true);
-  const [loginValue, setLoginValue] = useState("Create an account");
+  const [loginValue, setLoginValue] = useState("Crear una cuenta");
 
   const loginSignupModalToggle = () =>
     data.loginSignupModal
@@ -17,10 +17,10 @@ const LoginSignup = (props) => {
   const changeLoginSignup = () => {
     if (login) {
       setLogin(false);
-      setLoginValue("Login");
+      setLoginValue("Iniciar sesión");
     } else {
       setLogin(true);
-      setLoginValue("Create an account");
+      setLoginValue("Crea una cuenta");
     }
   };
 

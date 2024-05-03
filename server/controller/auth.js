@@ -31,15 +31,15 @@ class Auth {
     if (!name || !email || !password || !cPassword) {
       error = {
         ...error,
-        name: "Filed must not be empty",
-        email: "Filed must not be empty",
-        password: "Filed must not be empty",
-        cPassword: "Filed must not be empty",
+        name: "Campo obligatorio",
+        email: "Campo obligatorio",
+        password: "Campo obligatorio",
+        cPassword: "Campo obligatorio",
       };
       return res.json({ error });
     }
     if (name.length < 3 || name.length > 25) {
-      error = { ...error, name: "Name must be 3-25 charecter" };
+      error = { ...error, name: "El nombre debe tener mínimo 3 caracteres" };
       return res.json({ error });
     } else {
       if (validateEmail(email)) {
@@ -47,7 +47,7 @@ class Auth {
         if ((password.length > 255) | (password.length < 8)) {
           error = {
             ...error,
-            password: "Password must be 8 charecter",
+            password: "Contraseña debe tener mínimo 8 caracteres",
             name: "",
             email: "",
           };
@@ -62,7 +62,7 @@ class Auth {
                 ...error,
                 password: "",
                 name: "",
-                email: "Email already exists",
+                email: "Email ya existe en la base de datos",
               };
               return res.json({ error });
             } else {
@@ -77,7 +77,7 @@ class Auth {
                 .save()
                 .then((data) => {
                   return res.json({
-                    success: "Account create successfully. Please login",
+                    success: "Cuenta creada con éxito. Por favor inicia sesión",
                   });
                 })
                 .catch((err) => {
@@ -93,7 +93,7 @@ class Auth {
           ...error,
           password: "",
           name: "",
-          email: "Email is not valid",
+          email: "Email no es válido",
         };
         return res.json({ error });
       }
@@ -105,14 +105,14 @@ class Auth {
     let { email, password } = req.body;
     if (!email || !password) {
       return res.json({
-        error: "Fields must not be empty",
+        error: "Campo obligatorio",
       });
     }
     try {
       const data = await userModel.findOne({ email: email });
       if (!data) {
         return res.json({
-          error: "Invalid email or password",
+          error: "Email o contraseña incorrecto",
         });
       } else {
         const login = await bcrypt.compare(password, data.password);
@@ -128,7 +128,7 @@ class Auth {
           });
         } else {
           return res.json({
-            error: "Invalid email or password",
+            error: "Email o contraseña incorrecto",
           });
         }
       }

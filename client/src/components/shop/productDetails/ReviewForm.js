@@ -58,10 +58,9 @@ const ReviewForm = (props) => {
       ) : (
         <div className="mb-12 md:mx-16 lg:mx-20 xl:mx-24 flex flex-col">
           <div className="flex flex-col space-y-2">
-            <span className="text-2xl font-medium">Add a review</span>
+            <span className="text-2xl font-medium">Añadir una review</span>
             <span className="text-gray-600 text-sm">
-              Your email address will not be published. Required fields are
-              marked *
+              Tu email será privado, rellena todos los campos marcados por *
             </span>
           </div>
           {/* Input Rating */}
@@ -142,7 +141,7 @@ const ReviewForm = (props) => {
                 id="textArea"
                 cols={30}
                 rows={3}
-                placeholder="Your review..."
+                placeholder="Tu review..."
               />
             </div>
             <div
@@ -150,7 +149,7 @@ const ReviewForm = (props) => {
               style={{ background: "#303031" }}
               className="inline-block rounded px-4 py-2 text-white text-center cursor-pointer"
             >
-              Submit
+              Enviar
             </div>
           </div>
         </div>

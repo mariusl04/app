@@ -117,7 +117,7 @@ const EditProductModal = (props) => {
         <div className="mt-32 md:mt-0 relative bg-white w-11/12 md:w-3/6 shadow-lg flex flex-col items-center space-y-4 px-4 py-4 md:px-8">
           <div className="flex items-center justify-between w-full pt-4">
             <span className="text-left font-semibold text-2xl tracking-wider">
-              Edit Product
+              Editar Producto
             </span>
             {/* Close Modal */}
             <span
@@ -148,7 +148,7 @@ const EditProductModal = (props) => {
           <form className="w-full" onSubmit={(e) => submitForm(e)}>
             <div className="flex space-x-1 py-4">
               <div className="w-1/2 flex flex-col space-y-1 space-x-1">
-                <label htmlFor="name">Product Name *</label>
+                <label htmlFor="name">Nombre *</label>
                 <input
                   value={editformData.pName}
                   onChange={(e) =>
@@ -164,7 +164,7 @@ const EditProductModal = (props) => {
                 />
               </div>
               <div className="w-1/2 flex flex-col space-y-1 space-x-1">
-                <label htmlFor="price">Product Price *</label>
+                <label htmlFor="price">Precio *</label>
                 <input
                   value={editformData.pPrice}
                   onChange={(e) =>
@@ -182,7 +182,7 @@ const EditProductModal = (props) => {
               </div>
             </div>
             <div className="flex flex-col space-y-2">
-              <label htmlFor="description">Product Description *</label>
+              <label htmlFor="description">Descripción *</label>
               <textarea
                 value={editformData.pDescription}
                 onChange={(e) =>
@@ -202,7 +202,7 @@ const EditProductModal = (props) => {
             </div>
             {/* Most Important part for uploading multiple image */}
             <div className="flex flex-col mt-4">
-              <label htmlFor="image">Product Images *</label>
+              <label htmlFor="image">Imágenes *</label>
               {editformData.pImages ? (
                 <div className="flex space-x-1">
                   <img
@@ -219,7 +219,7 @@ const EditProductModal = (props) => {
               ) : (
                 ""
               )}
-              <span className="text-gray-600 text-xs">Must need 2 images</span>
+              <span className="text-gray-600 text-xs">Mínimo 2</span>
               <input
                 onChange={(e) =>
                   setEditformdata({
@@ -239,7 +239,7 @@ const EditProductModal = (props) => {
             {/* Most Important part for uploading multiple image */}
             <div className="flex space-x-1 py-4">
               <div className="w-1/2 flex flex-col space-y-1">
-                <label htmlFor="status">Product Status *</label>
+                <label htmlFor="status">Estado *</label>
                 <select
                   value={editformData.pStatus}
                   onChange={(e) =>
@@ -255,15 +255,15 @@ const EditProductModal = (props) => {
                   id="status"
                 >
                   <option name="status" value="Active">
-                    Active
+                    Activo
                   </option>
                   <option name="status" value="Disabled">
-                    Disabled
+                    Inactivo
                   </option>
                 </select>
               </div>
               <div className="w-1/2 flex flex-col space-y-1">
-                <label htmlFor="status">Product Category *</label>
+                <label htmlFor="status">Categoría *</label>
                 <select
                   onChange={(e) =>
                     setEditformdata({
@@ -278,7 +278,7 @@ const EditProductModal = (props) => {
                   id="status"
                 >
                   <option disabled value="">
-                    Select a category
+                    Selecciona una
                   </option>
                   {categories && categories.length > 0
                     ? categories.map((elem) => {
@@ -312,7 +312,7 @@ const EditProductModal = (props) => {
             </div>
             <div className="flex space-x-1 py-4">
               <div className="w-1/2 flex flex-col space-y-1">
-                <label htmlFor="quantity">Product in Stock *</label>
+                <label htmlFor="quantity">Número en Stock *</label>
                 <input
                   value={editformData.pQuantity}
                   onChange={(e) =>
@@ -328,23 +328,6 @@ const EditProductModal = (props) => {
                   id="quantity"
                 />
               </div>
-              <div className="w-1/2 flex flex-col space-y-1">
-                <label htmlFor="offer">Product Offfer (%) *</label>
-                <input
-                  value={editformData.pOffer}
-                  onChange={(e) =>
-                    setEditformdata({
-                      ...editformData,
-                      error: false,
-                      success: false,
-                      pOffer: e.target.value,
-                    })
-                  }
-                  type="number"
-                  className="px-4 py-2 border focus:outline-none"
-                  id="offer"
-                />
-              </div>
             </div>
             <div className="flex flex-col space-y-1 w-full pb-4 md:pb-6 mt-4">
               <button
@@ -352,7 +335,7 @@ const EditProductModal = (props) => {
                 type="submit"
                 className="rounded-full bg-gray-800 text-gray-100 text-lg font-medium py-2"
               >
-                Update product
+                Actualizar producto
               </button>
             </div>
           </form>

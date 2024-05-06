@@ -15,30 +15,17 @@ const Submenu = (props) => {
               onClick={(e) => history.push("/")}
             >
               Tienda
+            <span className="text-yellow-700">{' > '}</span>
             </span>
+            
             <span
               className="hover:text-yellow-700 cursor-pointer"
               onClick={(e) => history.push(`/products/category/${categoryId}`)}
             >
               {category}
             </span>
+            <span className="text-yellow-700">{' > '}</span>
             <span className="text-yellow-700 cursor-default">{product}</span>
-          </div>
-          <div>
-            <svg
-              className="w-3 h-3"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M13 5l7 7-7 7M5 5l7 7-7 7"
-              />
-            </svg>
           </div>
         </div>
       </section>
